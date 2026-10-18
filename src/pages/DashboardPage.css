@@ -1,0 +1,70 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.dash-hero {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-8);
+  align-items: start;
+  padding-bottom: var(--space-8);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+.dash-region-tag { display: inline-flex; }
+
+.dash-xp-card {
+  min-width: 280px;
+  max-width: 320px;
+}
+
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.dash-equipment .equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.equip-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-actions .actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.action-btn {
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-5);
+  height: auto;
+  align-items: flex-start;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+@media (max-width: 1024px) {
+  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+  .dash-actions .actions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .dash-hero { grid-template-columns: 1fr; }
+  .dash-xp-card { min-width: unset; max-width: 100%; }
+  .dash-stats { grid-template-columns: repeat(2, 1fr); }
+  .dash-equipment .equipment-grid { grid-template-columns: 1fr; }
+}
