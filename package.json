@@ -1,0 +1,36 @@
+{
+  "name": "valles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Valles: Interplanetary Survival Guide — Mars exploration game + professional mission planner",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "demo": "npx tsx scripts/run_demo.ts",
+    "data:generate": "python data-pipeline/generate_terrain.py",
+    "data:jezero": "python data-pipeline/regions/jezero.py",
+    "data:valles": "python data-pipeline/regions/valles_marineris.py",
+    "data:olympus": "python data-pipeline/regions/olympus_mons.py"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.0",
+    "zustand": "^4.5.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.1",
+    "vitest": "^2.1.1"
+  }
+}
