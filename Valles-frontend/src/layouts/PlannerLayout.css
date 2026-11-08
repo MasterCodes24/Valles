@@ -1,0 +1,124 @@
+.planner-layout {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-surface-0, #020d14);
+  color: var(--clr-text-primary, #d0eaf8);
+  font-family: 'Space Mono', monospace;
+  position: relative;
+  overflow: hidden;
+}
+
+.planner-layout::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0,200,255,0.012) 2px,
+      rgba(0,200,255,0.012) 4px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.planner-scanline {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0,200,255,0.4), transparent);
+  animation: scanline 4s linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.planner-header {
+  background: rgba(0,10,22,0.95);
+  border-bottom: 1px solid rgba(0,200,255,0.2);
+  position: relative;
+  z-index: 5;
+}
+
+.planner-header-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planner-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.planner-logo-icon {
+  color: #00c8ff;
+  filter: drop-shadow(0 0 8px rgba(0,200,255,0.6));
+}
+
+.planner-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #00c8ff;
+  text-shadow: 0 0 12px rgba(0,200,255,0.5);
+}
+
+.planner-subtitle {
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  color: rgba(0,200,255,0.5);
+  margin-top: 2px;
+}
+
+.planner-status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: rgba(0,200,255,0.6);
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00ff88;
+  box-shadow: 0 0 8px rgba(0,255,136,0.8);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.planner-time {
+  color: rgba(0,200,255,0.4);
+  font-size: 0.6rem;
+}
+
+.planner-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  overflow-y: auto;
+}
+
+.planner-footer {
+  background: rgba(0,10,22,0.95);
+  border-top: 1px solid rgba(0,200,255,0.15);
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  color: rgba(255,180,0,0.6);
+  position: relative;
+  z-index: 5;
+}

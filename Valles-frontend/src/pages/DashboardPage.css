@@ -1,0 +1,115 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* ── Top Operator Grid: 3D Body + Intel Column ── */
+.dash-operator-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+  align-items: stretch;
+}
+
+.dash-model-container {
+  display: flex;
+  min-height: 520px;
+}
+
+.dash-intel-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  justify-content: space-between;
+}
+
+.dash-intel-card {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dash-region-tag {
+  display: inline-flex;
+  align-self: flex-start;
+}
+
+.dash-xp-subcard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.dash-rewards-card {
+  padding: var(--space-5);
+  border-color: rgba(245, 200, 66, 0.25);
+  background: linear-gradient(135deg, rgba(245, 200, 66, 0.04) 0%, rgba(11, 13, 18, 0.9) 100%);
+}
+
+/* ── Stats Grid ── */
+.dash-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+/* ── Equipment Grid ── */
+.dash-equipment .equipment-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.equip-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Actions Grid ── */
+.dash-actions .actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.action-btn {
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-5);
+  height: auto;
+  align-items: flex-start;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .dash-operator-grid {
+    grid-template-columns: 1fr;
+  }
+  .dash-model-container {
+    min-height: 480px;
+  }
+  .dash-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .dash-actions .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dash-model-container {
+    min-height: 400px;
+  }
+  .dash-stats {
+    grid-template-columns: 1fr;
+  }
+  .dash-equipment .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  .dash-actions .actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
