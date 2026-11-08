@@ -28,8 +28,6 @@
   - [Backend Setup (FastAPI + Gemini)](#backend-setup-fastapi--gemini)
   - [Frontend Setup (React + Vite + Three.js)](#frontend-setup-react--vite--threejs)
   - [Supabase Setup (Auth & Database)](#supabase-setup-auth--database)
-- [API Reference (Realistic Mode)](#-api-reference-realistic-mode)
-- [Testing](#-testing)
 - [Scientific References & Citations](#-scientific-references--citations)
 - [License](#-license)
 
