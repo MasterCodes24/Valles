@@ -6,7 +6,11 @@
  *   VITE_REALISTIC_API_URL=http://localhost:8000
  */
 
-const BASE = import.meta.env.VITE_REALISTIC_API_URL || 'http://localhost:8000'
+// In production on Vercel (same-origin routing via vercel.json rewrites), default to ''
+// In local development, fall back to http://localhost:8000 unless overridden by VITE_REALISTIC_API_URL
+const BASE = import.meta.env.VITE_REALISTIC_API_URL !== undefined
+  ? import.meta.env.VITE_REALISTIC_API_URL
+  : (import.meta.env.PROD ? '' : 'http://localhost:8000')
 
 /**
  * Step 1 — Parse user text into a confirmed scenario.

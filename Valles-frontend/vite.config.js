@@ -6,4 +6,12 @@ export default defineConfig({
   optimizeDeps: {
     include: ['maplibre-gl'],
   },
+  server: {
+    proxy: {
+      '/realistic': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
+    },
+  },
 })
