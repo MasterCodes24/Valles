@@ -288,3 +288,5 @@ MarsSim/
 ## 📄 License
 
 This project was built for the **NASA Space Apps Challenge**. Code is made available under the [MIT License](LICENSE). Planetary datasets and citations belong to their respective NASA/JPL-Caltech missions and research teams.
+
+My OFFCAMPUS Code: 98NWJB
